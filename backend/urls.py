@@ -24,8 +24,8 @@ router.register('messages', MessageViewSet)
 
 urlpatterns = [
     # http://localhost:8000/
-    url('^/', index_view, name='index'),
+    url(r'^$', index_view, name='index'),
 
     # http://localhost:8000/api/<router-viewsets>
-    url('api/', include(router.urls)),
+    url(r'^api/', include(router.urls)),
 ]
