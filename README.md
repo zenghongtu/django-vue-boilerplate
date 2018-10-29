@@ -27,27 +27,27 @@ $ python manage.py migrate
 $ cd frontend & yarn install
 ```
 
-### 开发环境
+### 运行开发环境
 
 ```
-$ python manage.py serve
+$ yarn run serve
 ```
-或者
-```
-$ python manage.py runserver
-```
-**会自动运行`yarn serve`**
 
 ### 部署
 
-#### 打包
+#### 运行打包
 ```
-$ python manage.py build
+$ yarn run build
 ```
+'Type 'yes' to continue, or 'no' to cancel:'
+
+输入 ***`yes`***
 
 #### 配置
 设置 `backend.settings.prod.py` 中的 `ALLOWED_HOSTS`
-- Apache: 修改 `backend.Apache.backend.conf` 中目录路径
+- Apache: 修改 `backend.Apache.backend.conf` 中项目路径
+
+#### 上传文件到服务器
 
 ### 目录结构
 
@@ -62,3 +62,5 @@ $ python manage.py build
 | `/backend/dist/`             | 打包后的文件(通过` python manage.py build`) |
 
 
+### 其他
+部分代码参考[django-vue-template](https://github.com/gtalarico/django-vue-template/),特别感谢@[gtalarico](https://github.com/gtalarico)
