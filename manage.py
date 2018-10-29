@@ -4,6 +4,7 @@ import subprocess
 import sys
 
 if __name__ == "__main__":
+    argv = sys.argv
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "backend.settings.dev")
     try:
         from django.core.management import execute_from_command_line
@@ -20,7 +21,17 @@ if __name__ == "__main__":
                 "forget to activate a virtual environment?"
             )
         raise
-    if os.environ.get('IS_VUE_RUN') != '1' and sys.argv[1] == 'runserver':
-        subprocess.Popen('yarn serve', cwd=os.path.join(os.path.dirname(__file__), 'frontend'), shell=True)
-        os.environ.setdefault("IS_VUE_RUN", '1')
-    execute_from_command_line(sys.argv)
+    if argv[1] == 'build':
+        p = subprocess.Popen('yarn build', cwd=os.path.join(os.path.dirname(__file__), 'frontend'), shell=True)
+        p.wait()
+        argv[1] = 'collectstatic'
+        print("\033[1;35m " + "Please input 'yes'!" + "\033[0m")
+    else:
+        if os.environ.get('IS_VUE_RUN') != '1' and (argv[1] == 'runserver' or argv[1] == 'serve'):
+            subprocess.Popen('yarn serve', cwd=os.path.join(os.path.dirname(__file__), 'frontend'), shell=True)
+            os.environ.setdefault("IS_VUE_RUN", '1')
+        if argv[1] == 'serve':
+            argv[1] = 'runserver'
+            argv.append('8000')
+            print(" ".join(argv))
+    execute_from_command_line(argv)
