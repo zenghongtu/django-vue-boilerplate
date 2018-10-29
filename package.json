@@ -1,0 +1,20 @@
+{
+  "name": "django-vue-boilerplate",
+  "version": "0.1.0",
+  "description": "基于 Vue 和 Django（RestFramework）的应用程序模板。",
+  "main": "index.js",
+  "scripts": {
+    "serve": "python manage.py serve",
+    "build": "python manage.py build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenghongtu/django-vue-boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zenghongtu/django-vue-boilerplate/issues"
+  },
+  "homepage": "https://github.com/zenghongtu/django-vue-boilerplate#readme"
+}
