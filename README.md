@@ -1,5 +1,7 @@
 ## django-vue-boilerplate
 
+README: [English](https://github.com/zenghongtu/django-vue-boilerplate/blob/master/README_en.md) | [中文](https://github.com/zenghongtu/django-vue-boilerplate)
+
 基于 Vue 和 Django（RestFramework）的应用程序模板。
 
 
@@ -59,8 +61,8 @@ $ yarn run build
 | `/frontend/src/main.js`  | JS 入口文件                 |
 | `/frontend/public/index.html` | HTML 入口文件 (`/`)         |
 | `/frontend/src/assets`     | 静态文件                              |
-| `/backend/dist/`             | 打包后的文件(通过` python manage.py build`) |
+| `/backend/dist/`             | 打包后的文件(通过`python manage.py build` or `yarn run build`) |
 
 
 ### 其他
-示例部分代码参考[django-vue-template](https://github.com/gtalarico/django-vue-template/),特别感谢@[gtalarico](https://github.com/gtalarico)
+示例部分代码参考[django-vue-template](https://github.com/gtalarico/django-vue-template/), 感谢@[gtalarico](https://github.com/gtalarico)
