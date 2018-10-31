@@ -63,4 +63,4 @@ $ yarn run build
 
 
 ### 其他
-部分代码参考[django-vue-template](https://github.com/gtalarico/django-vue-template/),特别感谢@[gtalarico](https://github.com/gtalarico)
+示例部分代码参考[django-vue-template](https://github.com/gtalarico/django-vue-template/),特别感谢@[gtalarico](https://github.com/gtalarico)
