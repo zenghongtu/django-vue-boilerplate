@@ -2,7 +2,7 @@
 
 README: [English](https://github.com/zenghongtu/django-vue-boilerplate/blob/master/README_en.md) | [中文](https://github.com/zenghongtu/django-vue-boilerplate)
 
-an application using VueJs and Django (RestFramework).。
+an application using VueJs and Django (RestFramework).
 
 
 ### Prerequisites
