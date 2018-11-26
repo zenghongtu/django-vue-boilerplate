@@ -17,14 +17,14 @@ Including another URLconf
 from django.conf.urls import url, include
 from rest_framework import routers
 
-from .api.views import index_view, MessageViewSet,test
+from .api.views import IndexPageView, MessageViewSet,test
 
 router = routers.DefaultRouter()
 router.register('messages', MessageViewSet)
 
 urlpatterns = [
     # http://localhost:8000/
-    url(r'^$', index_view, name='index'),
+    url(r'^$', IndexPageView.as_view(), name='index'),
 
     # http://localhost:8000/api/<router-viewsets>
     url(r'^api/', include(router.urls)),
