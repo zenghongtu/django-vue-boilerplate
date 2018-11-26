@@ -17,7 +17,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from rest_framework import routers
 
-from .api.views import index_view, MessageViewSet
+from .api.views import index_view, MessageViewSet,test
 
 router = routers.DefaultRouter()
 router.register('messages', MessageViewSet)
@@ -28,4 +28,5 @@ urlpatterns = [
 
     # http://localhost:8000/api/<router-viewsets>
     url(r'^api/', include(router.urls)),
+    url(r'^test/', test),
 ]
